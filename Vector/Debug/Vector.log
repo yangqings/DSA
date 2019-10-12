@@ -1,0 +1,19 @@
+﻿  main.cpp
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\print_implementation.h(13,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“T *”
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\print_implementation.h(13,9): warning C4477:         with
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\print_implementation.h(13,9): warning C4477:         [
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\print_implementation.h(13,9): warning C4477:             T=Vector<int>
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\print_implementation.h(13,9): warning C4477:         ]
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\print.h(6): message : 查看对正在编译的函数 模板 实例化“void UniPrint::p<T>(T &)”的引用
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\print.h(6): message :         with
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\print.h(6): message :         [
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\print.h(6): message :             T=Vector<int>
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\print.h(6): message :         ]
+  pch.cpp
+  正在生成代码...
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\main.cpp(14): message : 查看对正在编译的函数 模板 实例化“void print<Vector<int>>(T &)”的引用
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\main.cpp(14): message :         with
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\main.cpp(14): message :         [
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\main.cpp(14): message :             T=Vector<int>
+C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Vector\main.cpp(14): message :         ]
+  Vector.vcxproj -> C:\Users\yangq\Desktop\DesktopFile\MyDemo\github\Mysda\Debug\Vector.exe
