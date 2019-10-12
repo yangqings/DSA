@@ -41,5 +41,14 @@
     <ClInclude Include="vector_implementation.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="vector_search_binary.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vector_search_fibonacci.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fibonacci.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

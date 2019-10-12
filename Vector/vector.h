@@ -16,7 +16,8 @@ protected:
 public:
 	Vector(int c = DEFAULT_CAPACITY, int s = 0, T v = 0)//容量c，规模s，初始值v
 	{
-		_elem = new T[_capacity = c]; for (_size = 0; _size < s; _elem[_size++] = v);
+		_elem = new T[_capacity = c]; 
+		for (_size = 0; _size < s; _elem[_size++] = v);
 	}
 	~Vector() { delete[] _elem; }
 	Rank size() const { return _size; }

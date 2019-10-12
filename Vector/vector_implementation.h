@@ -1,6 +1,8 @@
 #pragma once
 #include "pch.h"
 #include "vector.h"
+#include "vector_search_binary.h"
+#include "vector_search_fibonacci.h"
 
 //以下是类成员函数和重载操作符的定义
 //基于复制的向量构造器
@@ -110,7 +112,8 @@ Rank Vector<T>::find(T const&e, Rank lo, Rank hi)const {
 //e是目标值
 template <typename T>
 Rank Vector<T>::search(T const&e, Rank lo, Rank hi)const {
-
+	//return (rand() % 2) ? : ;
+	return binSearch_C(_elem,e,lo,hi);
 }
 
 //遍历

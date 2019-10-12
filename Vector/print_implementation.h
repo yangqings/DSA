@@ -10,8 +10,9 @@ void UniPrint::p(char e) { printf("%c", (31 < e) && (e < 128) ? e : '$'); }
 //typeid():返回指针或引用所指对象的实际类型
 template <typename T>
 void UniPrint::p(T& s) {
-	printf("%s[%d]*%d:\n", typeid(s).name(), &s, s.size());
+	printf("%s[%p]*%d:\n", typeid(s).name(), &s, s.size());
 	s.traverse( print );
 	printf("\n");
 }
+//%p输出指针地址值
 
