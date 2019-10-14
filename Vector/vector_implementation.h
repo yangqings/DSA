@@ -1,5 +1,6 @@
 #pragma once
 #include "pch.h"
+#include "rand.h"
 #include "vector.h"
 #include "vector_search_binary.h"
 #include "vector_search_fibonacci.h"
@@ -112,8 +113,9 @@ Rank Vector<T>::find(T const&e, Rank lo, Rank hi)const {
 //e是目标值
 template <typename T>
 Rank Vector<T>::search(T const&e, Rank lo, Rank hi)const {
-	//return (rand() % 2) ? : ;
-	return binSearch_C(_elem,e,lo,hi);
+	srand((unsigned)time(0));//改变随机种子的值,使得每次产生的元素随机s
+	return (rand() % 2) ? binSearch_C(_elem, e, lo, hi) : fibSearch(_elem, e, lo, hi);
+	//return binSearch_C(_elem,e,lo,hi);
 }
 
 //遍历

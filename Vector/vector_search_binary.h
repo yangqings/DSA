@@ -1,6 +1,18 @@
 #pragma once
 
 template <typename T>
+static Rank binSearch_A(T* A,T const& e,Rank lo,Rank hi)
+{
+	while (lo < hi) {
+		Rank mi = (lo + hi) >> 2;
+		if (e < A[mi])hi = mi;
+		else if (A[mi] < e)lo = mi + 1;
+		else return mi;
+	}
+    return -1;//查找失败
+}//多个元素命中时，不能返回秩最大者
+
+template <typename T>
 static Rank binSearch_C(T* A, T const& e, Rank lo, Rank hi) 
 {
 	std::cout << "BinSearch (C)\n";
