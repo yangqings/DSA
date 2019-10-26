@@ -4,12 +4,12 @@
 template <typename T> class List {//列表类模板
 
 private:
-	int _size; ListNode(T) header; ListNode<T> trailer;
+	int _size; ListNodePosi(T) header; ListNodePosi(T) trailer;
 
 protected:
 	void init();
 	int clear();
-	void copyNodes(ListNodePosi(T), int);
+	void copyNodes(ListNodePosi(T) p, int n);
 
 public:
 	//构造函数
@@ -21,8 +21,11 @@ public:
 	//析构函数
 	~List();
 
-	//
-
+	//接口函数
+	ListNodePosi(T)first()const { return header->succ; }
+	ListNodePosi(T)last()const { return trailer->pred; }
+	T& operator[] (Rank r)const;//重载[]操作符
+	T remove(ListNodePosi(T) p);//删除节点，返回被删除的节点
 };
 
 

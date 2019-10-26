@@ -6,11 +6,11 @@
 using namespace std;
 #define TEST_SIZE 20
 
+
 int main(void)
 {
 	Vector<int> V1;
 	int e;
-
 	cout << "Vector Test!\n";
 	srand((unsigned)time(0));//改变随机种子的值,使得每次产生的元素随机s
 	for (int i = 0; i < TEST_SIZE; i++) V1.insert(randn(100));//随机插入[0,100)范围内 TEST_SIZE 个数

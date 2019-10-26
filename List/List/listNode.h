@@ -4,7 +4,7 @@ typedef int Rank;
 
 #define ListNodePosi(T) ListNode<T>*
 
-template <typename T> struct ListNode {//列表节点模板类(双向链表)
+template <typename T> struct ListNode {//节点模板类(双向)
 	T data; ListNodePosi(T) pred; ListNodePosi(T) succ;//数值、前驱节点、后继节点
 
 	//构造函数
@@ -34,6 +34,7 @@ template <typename T>
 ListNodePosi(T) ListNode<T>::insertAsSucc(T const& e) {
 	ListNodePosi(T) x = new ListNode(e, this, succ);//新节点的前驱是当前节点,this是当前节点
 
+	//以下这两步的顺序不能反
 	succ-> pred = x;//节点的后继节点的前驱指向新节点
 	succ = x;//节点的后继指向新节点
 
