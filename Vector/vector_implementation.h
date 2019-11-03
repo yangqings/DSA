@@ -1,5 +1,5 @@
 #pragma once
-#include "pch.h"
+#include "../UPrint/pch.h"
 #include "rand.h"
 #include "vector.h"
 #include "vector_search_binary.h"
@@ -131,4 +131,3 @@ void Vector<T>::traverse(VST& visit) {
 	for (int i = 0; i < _size; i++)
 		visit(_elem[i]);
 }
-

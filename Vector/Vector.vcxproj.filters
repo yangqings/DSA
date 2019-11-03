@@ -23,15 +23,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="print.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="print_implementation.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="rand.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -48,6 +39,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="fibonacci.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\UPrint\print.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\UPrint\print_implementation.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

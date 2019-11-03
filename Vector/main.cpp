@@ -1,8 +1,8 @@
-#include "pch.h"
+#include "../UPrint/pch.h"
 #include <iostream>
 #include "vector.h"
 #include "rand.h"
-#include "print.h"
+#include "../UPrint/print.h"
 using namespace std;
 #define TEST_SIZE 20
 
