@@ -2,9 +2,9 @@
 #include "../UPrint/pch.h"
 
 void UniPrint::p(int e) { printf("%d ", e); }
-void UniPrint::p(float e) { printf("%4.1f", e); }
-void UniPrint::p(double e) { printf("%4.1f", e); }
-void UniPrint::p(char e) { printf("%c", (31 < e) && (e < 128) ? e : '$'); }
+void UniPrint::p(float e) { printf("%4.1f ", e); }
+void UniPrint::p(double e) { printf("%4.1f ", e); }
+void UniPrint::p(char e) { printf("%c ", ((31 < e) && (e < 128))? e : '$'); }
 
 
 //typeid():返回指针或引用所指对象的实际类型

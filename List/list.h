@@ -34,7 +34,7 @@ public:
 	T& operator[] (Rank r)const;//重载[]操作符
 	T remove(ListNodePosi(T) p);//删除节点，返回被删除的节点
 
-	void traverse(void(*)(T&));//遍历
+	void traverse(void(*visit)(T&));//遍历
     template <typename VST>
 	void traverse(VST&);
 };
