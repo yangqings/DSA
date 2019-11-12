@@ -11,6 +11,7 @@ protected:
 	void init();
 	int clear();
 	void copyNodes(ListNodePosi(T) p, int n);
+	void insertionSort(ListNodePosi(T) p, int n);
 
 public:
 	//构造函数
@@ -30,6 +31,9 @@ public:
 	ListNodePosi(T)insertAsLast(T const& e);
 	ListNodePosi(T)insertA(ListNodePosi(T) p, T const& e);
 	ListNodePosi(T)insertB(ListNodePosi(T) p, T const& e);
+
+	//列表排序
+	void sort(ListNodePosi(T) p, int n);//区间排序
 
 	T& operator[] (Rank r)const;//重载[]操作符
 	T remove(ListNodePosi(T) p);//删除节点，返回被删除的节点

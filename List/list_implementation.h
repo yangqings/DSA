@@ -25,6 +25,13 @@ void List<T>::copyNodes(ListNodePosi(T) p, int n) {
 	while (n--) { insertAsLast(p->data); p = p->succ; }
 }
 
+
+//排序算法的实现
+template <typename T>
+void List<T>::insertionSort(ListNodePosi(T)p, int n) {
+
+}
+
 //公有函数
 template <typename T> 
 List<T>::List(List<T> const& L) {
@@ -66,6 +73,12 @@ ListNodePosi(T) List<T>::insertA(ListNodePosi(T) p, T const& e) {
 template <typename T>
 ListNodePosi(T) List<T>::insertB(ListNodePosi(T) p, T const & e) {
 	_size++; return p->insertAsPred(e);
+}
+
+//排序
+template <typename T>
+void List<T>::sort(ListNodePosi(T) p, int n) {
+	insertionSort(p, n);
 }
 
 //重载[]操作符，0<=r<size，秩访问节点，效率低
