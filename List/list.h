@@ -12,6 +12,7 @@ protected:
 	int clear();
 	void copyNodes(ListNodePosi(T) p, int n);
 	void insertionSort(ListNodePosi(T) p, int n);
+	void selectionSort(ListNodePosi(T) p, int n);
 
 public:
 	//构造函数
@@ -27,6 +28,18 @@ public:
 	ListNodePosi(T)first()const { return header->succ; }
 	ListNodePosi(T)last()const { return trailer->pred; }
 
+	ListNodePosi(T) find(T const& e)const //无序列表查找
+	{
+		return find(e, _size, trailer);//从后往前查找
+	}
+	ListNodePosi(T) find(T const& e, int n, ListNodePosi(T) p)const;//无序列表区间查找
+	ListNodePosi(T) search(T const&e)//有序列表查找
+	{
+		return search(e, _size,trailer); //从后往前查找
+	}
+	ListNodePosi(T) search(T const& e, int n, ListNodePosi(T) p)const;//有序列表区间查找
+	ListNodePosi(T) selectMax() { return selectMax(header->succ, _size); }
+	ListNodePosi(T) selectMax(ListNodePosi(T) p, int n);
 	ListNodePosi(T)insertAsFirst(T const& e);
 	ListNodePosi(T)insertAsLast(T const& e);
 	ListNodePosi(T)insertA(ListNodePosi(T) p, T const& e);

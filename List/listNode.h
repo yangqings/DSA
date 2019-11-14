@@ -36,7 +36,7 @@ ListNodePosi(T) ListNode<T>::insertAsSucc(T const& e) {
 
 	//以下这两步的顺序不能反
 	succ-> pred = x;//节点的后继节点的前驱指向新节点
-	succ = x;//节点的后继指向新节点
+	succ = x;       //节点的后继指向新节点
 
 	return x;
 }
