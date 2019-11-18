@@ -13,6 +13,8 @@ protected:
 	void copyNodes(ListNodePosi(T) p, int n);
 	void insertionSort(ListNodePosi(T) p, int n);
 	void selectionSort(ListNodePosi(T) p, int n);
+	void merge(ListNodePosi(T)& p, int n, List<T>& L, ListNodePosi(T) q, int m);//有序列表并归
+	void mergeSort(ListNodePosi(T)& p,int n);//并归排序
 
 public:
 	//构造函数
@@ -46,7 +48,7 @@ public:
 	ListNodePosi(T)insertB(ListNodePosi(T) p, T const& e);
 
 	//列表排序
-	void sort(ListNodePosi(T) p, int n);//区间排序
+	void sort(ListNodePosi(T) p, int n, int sortMethod);//区间排序
 
 	T& operator[] (Rank r)const;//重载[]操作符
 	T remove(ListNodePosi(T) p);//删除节点，返回被删除的节点

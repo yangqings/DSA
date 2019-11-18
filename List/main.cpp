@@ -22,7 +22,7 @@ int main()
 	randomList(La, 20);
 	print(La);
 	//print(La.selectMax()->data);
-	La.sort(La.first(), La.size());
+	La.sort(La.first(), La.size(),1);
 	print(La);
 	//La.sort(La.first(),La.size());
 	

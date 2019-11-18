@@ -3,6 +3,7 @@
 #include "vector.h"
 #include "rand.h"
 #include "../UPrint/print.h"
+
 using namespace std;
 #define TEST_SIZE 20
 
@@ -15,7 +16,7 @@ int main(void)
 	srand((unsigned)time(0));//改变随机种子的值,使得每次产生的元素随机s
 	for (int i = 0; i < TEST_SIZE; i++) V1.insert(randn(100));//随机插入[0,100)范围内 TEST_SIZE 个数
 	print(V1);
-	V1.sort(0, TEST_SIZE,1);
+	V1.sort(0, TEST_SIZE,2);
 	print(V1);
 	cout << "\nPlease input the element you want to search: ";
 	cin >> e;

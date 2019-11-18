@@ -1,5 +1,6 @@
 #pragma once
 #include "../Vector/vector.h"
+#include "list.h"
 
 //保护函数
 template <typename T> void List<T>::init() {//列表初始化
@@ -55,6 +56,17 @@ void List<T>::selectionSort(ListNodePosi(T) p, int n) {
 		insertB(trail ,remove(max));
 		trail = trail->pred; n--;
 	}
+}
+
+template <typename T>
+void List<T>::merge(ListNodePosi(T) & p, int n, List <T>& L, ListNodePosi(T) q, int m) {
+
+}
+
+template <typename T>
+void List<T>::mergeSort(ListNodePosi(T)& p, int n)
+{
+
 }
 
 //公有函数
@@ -135,9 +147,13 @@ ListNodePosi(T) List<T>::insertB(ListNodePosi(T) p, T const & e) {
 
 //排序
 template <typename T>
-void List<T>::sort(ListNodePosi(T) p, int n) {
-	//insertionSort(p, n);
-	selectionSort(p,n);
+void List<T>::sort(ListNodePosi(T) p, int n,int sortMethod) {
+	switch (sortMethod) {
+	case 1:insertionSort(p, n); break;
+	case 2:selectionSort(p, n); break;
+	case 3:mergeSort(p, n); break;
+	default:break;
+	}
 }
 
 //重载[]操作符，0<=r<size，秩访问节点，效率低

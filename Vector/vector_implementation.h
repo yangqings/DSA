@@ -64,6 +64,37 @@ bool Vector<T>::bubble(Rank lo, Rank hi) {
 	return sorted;
 }
 
+
+//并归
+template <typename T>
+void Vector<T>::merge(Rank lo, Rank mi, Rank hi)
+{
+	T* A = _elem + lo; //A[0,hi-lo) = _elem[lo,hi) 注意这里是将_elem地址赋值给新的指针A
+	int lb = mi - lo;
+	T* B = new T[lb];
+	for (Rank i = 0; i < lb; B[i] = A[i++]);//A[lo,mi)拷贝至B[0,lb)
+	int lc = hi - mi;
+	T* C = _elem + mi;//C[0,lc) = _elem[mi,hi)
+
+	for (Rank i = 0, j = 0, k = 0; (j < lb) || (k < lc);) //结束条件，两个子向量都遍历完
+	{
+		if ((j < lb) && (!(k < lc) || (B[j] <= C[k])))A[i++] = B[j++];
+		if ((k < lc) && (!(j < lb) || (C[k] <  B[j])))A[i++] = C[k++];
+	}//表达紧凑，但效率不如拆分处理
+	delete[] B;
+}
+
+//并归排序，复杂度O(nlogn)
+template <typename T>
+void Vector<T>::mergeSort(Rank lo, Rank hi)
+{
+	if (hi - lo < 2)return; //递归基
+	int mi = (hi + lo) / 2;
+	mergeSort(lo, mi);
+	mergeSort(mi, hi);
+	merge(lo, mi, hi);
+}
+
 //插入
 template <typename T> 
 Rank Vector<T>::insert(Rank r, T const& e) {
@@ -96,7 +127,7 @@ template <typename T>
 void Vector<T>::sort(Rank lo, Rank hi, int sortMethod) {
 	switch (sortMethod) {
 	case 1:bubbleSort(lo, hi); break;
-	case 2:break;
+	case 2:printf("mergeSort:\n"); mergeSort(lo,hi); break;
 	default:break;
 	}
 }
