@@ -22,7 +22,11 @@ int main(void)
 	cin >> e;
 	//cout << e <<"\n";
 	cout << V1.search(e, 0, TEST_SIZE)<<"\n";
-	V1.permute();
+
+	cout << "Please input the Rank of vector that you want to remove:";
+	cin >> e;
+	V1.remove(e);
+	//V1.permute();
 	print(V1);
     cout << "Done!\n";
     return 0;

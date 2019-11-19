@@ -5,9 +5,11 @@
 
 using namespace std;
 
-int main()
+int main(int argc,char* argv[])
 {
 	cout << "DSA: Stack!\n";
+	if (2 > argc) { printf("%s\n", argv[0]); return 1; }
+	return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

@@ -23,7 +23,8 @@ public:
 	~Vector() { delete[] _elem; }
 	Rank size() const { return _size; }
 	bool empty() const { return !_size; }
-
+	T remove(Rank r);
+	int remove(Rank lo, Rank hi);
 	T& operator[](Rank r)const;  //重载下标操作符
 	Vector<T>& operator = (Vector<T> const&);//重载赋值操作符
 

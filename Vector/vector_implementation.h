@@ -15,6 +15,25 @@ void Vector<T>::copyFrom(T const* A, Rank lo, Rank hi) {
 		_elem[_size++] = A[lo++];//逐一复制到_elem[0,hi-lo)
 }
 
+//删除元素_elem[lo,hi)
+//注意右侧是开区间
+template <typename T>
+int Vector<T>::remove(Rank lo, Rank hi){
+	if (lo == hi)return 0;
+	while (hi < _size)_elem[lo++] = _elem[hi++];
+	_size = lo;
+	shrink();
+	return hi - lo;
+}
+
+
+template <typename T>
+T Vector<T>::remove(Rank r) {
+	T e = _elem[r];
+	remove(r, r+1);
+	return e;
+}
+
 //重载"="操作符
 template <typename T> 
 Vector<T>& Vector<T>::operator= (Vector<T> const& V) {
