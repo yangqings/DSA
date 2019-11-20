@@ -1,11 +1,2 @@
 ﻿  main.cpp
-C:\Users\yangq\Desktop\MyDemo\Mydsa\Stack\stack.h(7,33): error C2065: “size”: 未声明的标识符
-C:\Users\yangq\Desktop\MyDemo\Mydsa\Stack\stack.h(7,33): error C3861: “size”: 找不到标识符
-C:\Users\yangq\Desktop\MyDemo\Mydsa\Stack\stack.h(7,37): message : “size”: 函数声明必须可用，因为所有参数都不依赖于模板参数
-C:\Users\yangq\Desktop\MyDemo\Mydsa\Stack\stack.h(10): message : 查看对正在编译的 类 模板 实例化“Stack<T>”的引用
-C:\Users\yangq\Desktop\MyDemo\Mydsa\Stack\stack.h(8,26): error C2065: “size”: 未声明的标识符
-C:\Users\yangq\Desktop\MyDemo\Mydsa\Stack\stack.h(8,26): error C3861: “size”: 找不到标识符
-C:\Users\yangq\Desktop\MyDemo\Mydsa\Stack\stack.h(8,30): message : “size”: 函数声明必须可用，因为所有参数都不依赖于模板参数
-C:\Users\yangq\Desktop\MyDemo\Mydsa\Stack\stack.h(9,28): error C2065: “size”: 未声明的标识符
-C:\Users\yangq\Desktop\MyDemo\Mydsa\Stack\stack.h(9,28): error C3861: “size”: 找不到标识符
-C:\Users\yangq\Desktop\MyDemo\Mydsa\Stack\stack.h(9,32): message : “size”: 函数声明必须可用，因为所有参数都不依赖于模板参数
+  Stack.vcxproj -> C:\Users\yangq\Desktop\MyDemo\Mydsa\Debug\Stack.exe

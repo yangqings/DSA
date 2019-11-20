@@ -1,14 +1,30 @@
 #include "../UPrint/print.h"
 #include "../UPrint/pch.h"
 #include "stack.h"
+#include <time.h>
 #include <iostream>
 
 using namespace std;
 
 int main(int argc,char* argv[])
 {
+	int n;
+	Stack <int> S;
 	cout << "DSA: Stack!\n";
-	if (2 > argc) { printf("%s\n", argv[0]); return 1; }
+	cout << "Please input the number of element:";
+	cin >> n;
+	srand((unsigned)time(0));//改变随机种子的值
+	for (int i = 0; i < n; i++)
+	{
+		S.push(rand()%100);
+	}
+	print(S);
+	for (int i = 0; i < n; i++)
+	{
+		S.pop();
+		print(S);
+	}
+	//if (2 > argc) { printf("%s\n", argv[0]); return 1; }
 	return 0;
 }
 
