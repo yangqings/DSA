@@ -3,6 +3,7 @@
 #include "list.h"
 #include <time.h>
 
+
 template <typename T>
 void randomList(List<T> & list, int n) {//生成长度为n的随机列表，[0,2n)选择n个偶数
 	ListNodePosi(T) p = ((T)(rand() % 2)) ?

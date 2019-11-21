@@ -3,6 +3,7 @@
 #include "stack.h"
 #include <time.h>
 #include <iostream>
+#include "convert.h" 
 
 using namespace std;
 
