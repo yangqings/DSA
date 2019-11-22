@@ -1,7 +1,7 @@
 #include "convert.h"
 #include "stack.h"
 
-//十进制转任意进制算法 
+//正十进制转任意进制算法 
 //S:栈，保存转换结果，栈顶为最高位; n:待转换的十进制数; base:转换为base进制 
 void convert(Stack<char>& S, __int64 n, int base)
 {
