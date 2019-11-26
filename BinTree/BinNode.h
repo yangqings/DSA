@@ -22,6 +22,9 @@ template <typename T> struct BinNode {
 	int size();
 	BinNodePosi(T) insertAsLC(T const& e);
 	BinNodePosi(T) insertAsRC(T const& e);
+	BinNodePosi(T) succ();
 
 
 };
+
+#include "BinNode_implementation.h"
