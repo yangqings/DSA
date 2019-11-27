@@ -26,6 +26,7 @@ public:
 	//析构函数
 	~List();
 	Rank size() const { return _size; } //规模
+	bool empty()const { return _size <= 0; }
 	//接口函数
 	ListNodePosi(T)first()const { return header->succ; }
 	ListNodePosi(T)last()const { return trailer->pred; }
