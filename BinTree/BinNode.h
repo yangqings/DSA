@@ -25,7 +25,7 @@ template <typename T> struct BinNode {
 	BinNodePosi(T) succ();
 
 	template <typename VST> void travLevel(VST&);//²ã´Î±éÀú
-
+	template <typename VST> void travIn(VST&);
 
 };
 
