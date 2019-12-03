@@ -1,7 +1,7 @@
 #pragma once
 #include <stddef.h>
 #define BinNodePosi(T)  BinNode<T>*
-typedef enum { RB_RED, RB_BLACK }RBColor;
+typedef enum { RB_RED=0, RB_BLACK }RBColor;
 
 //结构体与类的区别：结构体默认数据成员和函数成员的访问控制属性为公有类型
 //二叉树节点模板
@@ -25,7 +25,7 @@ template <typename T> struct BinNode {
 	BinNodePosi(T) succ();
 
 	template <typename VST> void travLevel(VST&);//层次遍历
-	template <typename VST> void travIn(VST&);
+	template <typename VST> void travIn(VST&);//中序遍历
 
 };
 

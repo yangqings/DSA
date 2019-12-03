@@ -156,6 +156,8 @@
   <ItemGroup>
     <ClInclude Include="BinNode.h" />
     <ClInclude Include="BinNode_implementation.h" />
+    <ClInclude Include="BinTree.h" />
+    <ClInclude Include="BinTree_implementation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
