@@ -2,6 +2,7 @@
 #include <stddef.h>
 #define BinNodePosi(T)  BinNode<T>*
 typedef enum { RB_RED=0, RB_BLACK }RBColor;
+#define stature(p) ((p)?(p)->height:-1)//约定空树高度为-1
 
 //结构体与类的区别：结构体默认数据成员和函数成员的访问控制属性为公有类型
 //二叉树节点模板
