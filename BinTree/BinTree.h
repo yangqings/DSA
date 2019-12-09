@@ -22,9 +22,9 @@ public:
 
 	int remove(BinNodePosi(T) x);//删除以节点x为根的子树
 	template <typename VST>
-	void travLevel(VST& visit){}//层次遍历
+	void travLevel(VST& visit) { if (_root)_root->travLevel(visit); }//层次遍历
 	template <typename VST>
-	void travIn(VST& visit){}//中序遍历
+	void travIn(VST& visit) { if (_root)_root->travIn(visit); }//中序遍历
 
 };
 

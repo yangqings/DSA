@@ -1,19 +1,41 @@
 ﻿// BinTree.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 #include <iostream>
 #include "BinNode.h"
-int main()
+#include "BinTree.h"
+#include "../Vector/rand.h"
+
+using namespace std;
+
+template <typename T>
+bool randomBinTree(BinTree<T>& bt, BinNodePosi(T) x, int h) 
 {
-	BinNode<int> B;
-    std::cout << "BinTree Test!\n";
+	if (0 >= h)return false;
+	if (0 < randn(h))
+		randomBinTree(bt, bt.insertAsLC(x, randn((T)h * h * h)), h - 1);
+	if (0 < randn(n))
+		randomBinTree(bt, bt.insertAsRC(x, randn((T)h * h * h)), h - 1);
+	return true;
 }
 
-// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
-// 调试程序: F5 或调试 >“开始调试”菜单
+//生成高度为h的测试二叉树
+template <typename T> 
+void testBinTree(int h)
+{
+	cout << "\n====BinTreeTest! Generate a binTree of height " << h;
+	BinTree<T> bt;
+	bt.insertAsRoot(randn((T)h * h * h)); print(bt);
+}
 
-// 入门使用技巧: 
-//   1. 使用解决方案资源管理器窗口添加/管理文件
-//   2. 使用团队资源管理器窗口连接到源代码管理
-//   3. 使用输出窗口查看生成输出和其他消息
-//   4. 使用错误列表窗口查看错误
-//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
+int main(int argc,char* argv[])
+{
+	if (2 > argc) { cout << "Usage:" << argv[0] << " <size of BinTree Test>\a\a\n"; return 1; }
+	srand((unsigned)time(NULL));//改变随机种子的值
+
+	BinNode<int> B;
+    cout << "BinTree Test!\n";
+
+
+
+	return 0;
+}
+

@@ -1,6 +1,8 @@
 #pragma once
 
 #include <stdio.h>
+#include "../BinTree/BinNode.h"
+#include "../BinTree/BinTree.h"
 
 template <typename T> static void print(T* x) { x ? print(*x) : printf("<NULL>"); }
 template <typename T> static void print(T& x) { UniPrint::p(x); }
@@ -13,6 +15,9 @@ public:
 	static void p(float);
 	static void p(double);
 	static void p(char);
+
+	template <typename T> static void p(BinNode<T>&);
+	template <typename T> static void p(BinTree<T>&);
 
 	//static void p(HuffChar&); //Huffman£¨³¬£©×Ö·û
 	//static void p(VStatus); //Í¼¶¥µãµÄ×´Ì¬
