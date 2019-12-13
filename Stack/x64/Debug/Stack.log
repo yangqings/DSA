@@ -1,0 +1,5 @@
+﻿  convert.cpp
+  main.cpp
+c:\myfile\6.demo\mydsa\stack\main.cpp(37): warning C4101: “buf”: 未引用的局部变量
+  正在生成代码...
+  Stack.vcxproj -> C:\MyFile\6.Demo\Mydsa\x64\Debug\Stack.exe

@@ -22,11 +22,11 @@ int main()
 	srand((unsigned)time(0));//改变随机种子的值,使得每次产生的元素随机s
 	randomList(La, 20);
 	print(La);
-	//print(La.selectMax()->data);
+	print(La.selectMax()->data);
 	La.sort(La.first(), La.size(),1);
 	print(La);
-	//La.sort(La.first(),La.size());
-	
+	La.sort(La.first(),La.size());
+	printf("hello world/n");
 	return 0;
 }
 
