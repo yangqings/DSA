@@ -1,2 +1,6 @@
 ﻿  BinTree.cpp
-  BinTree.vcxproj -> C:\Users\yangq\Desktop\MyDemo\Mydsa\Debug\BinTree.exe
+C:\Users\yangq\Desktop\MyDemo\Mydsa\BinTree\BinTree.h(13,38): error C2760: 语法错误: 意外标记 "}"，应为 ";"
+C:\Users\yangq\Desktop\MyDemo\Mydsa\BinTree\BinTree.h(29): message : 查看对正在编译的 类 模板 实例化“BinTree<T>”的引用
+C:\Users\yangq\Desktop\MyDemo\Mydsa\UPrint\print.h(8,49): error C3861: “UniPrint”: 找不到标识符
+C:\Users\yangq\Desktop\MyDemo\Mydsa\UPrint\print.h(9,55): error C3861: “UniPrint”: 找不到标识符
+C:\Users\yangq\Desktop\MyDemo\Mydsa\BinTree\BinTree.cpp(15,16): error C3861: “n”: 找不到标识符

@@ -12,7 +12,7 @@ bool randomBinTree(BinTree<T>& bt, BinNodePosi(T) x, int h)
 	if (0 >= h)return false;
 	if (0 < randn(h))
 		randomBinTree(bt, bt.insertAsLC(x, randn((T)h * h * h)), h - 1);
-	if (0 < randn(n))
+	if (0 < randn(h))
 		randomBinTree(bt, bt.insertAsRC(x, randn((T)h * h * h)), h - 1);
 	return true;
 }
@@ -32,9 +32,9 @@ int main(int argc,char* argv[])
 	srand((unsigned)time(NULL));//改变随机种子的值
 
 	BinNode<int> B;
-    cout << "BinTree Test!\n";
-
-
+	
+    cout << "BinTree Test!\n"; 
+	testBinTree<int> (10);
 
 	return 0;
 }

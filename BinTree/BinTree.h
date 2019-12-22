@@ -10,7 +10,7 @@ protected:
 
 public:
 	BinTree():_size(0),_root(NULL){}
-	~BinTree(){if(0<_size)remove(_root) }
+	~BinTree() { if (0 < _size)remove(_root); }
 	int size()const { return _size; }
 	bool empty()const { return !_root; }
 
