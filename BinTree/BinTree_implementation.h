@@ -1,10 +1,12 @@
 #pragma once
-
-
+#define max(a,b) (((a) > (b)) ? (a) : (b))
+#define min(a,b) (((a) < (b)) ? (a) : (b))
 //更新节点x的高度
 template <typename T>
 int BinTree<T>::updateHeight(BinNodePosi(T) x)
-{return x->height = 1 + max(stature(x->lc), stature(x->rc));}
+{
+	return x->height = 1 + max(stature(x->lc), stature(x->rc));
+}
 
 //更新树的高度
 template <typename T>
@@ -17,7 +19,7 @@ void BinTree<T>::updateHeightAbove(BinNodePosi(T) x)
 template <typename T>
 BinNodePosi(T) BinTree<T>::insertAsRoot(T const& e)
 {
-	_size = 1; return _root = new BinNodePosi(T) (e);
+	_size = 1; return _root = new BinNode<T> (e);
 }
 
 //作为节点x的左孩子插入
@@ -62,5 +64,5 @@ BinNodePosi(T) BinTree<T>::attachAsRC(BinNodePosi(T) x, BinTree<T>* &S)
 template <typename T>
 int BinTree<T>::remove(BinNodePosi(T) x)
 {
-
+	return 0;
 }

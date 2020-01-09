@@ -3,6 +3,8 @@
 #include "BinNode.h"
 #include "BinTree.h"
 #include "../Vector/rand.h"
+#include "../UPrint/print.h"
+
 
 using namespace std;
 
@@ -21,20 +23,18 @@ bool randomBinTree(BinTree<T>& bt, BinNodePosi(T) x, int h)
 template <typename T> 
 void testBinTree(int h)
 {
-	cout << "\n====BinTreeTest! Generate a binTree of height " << h;
+	cout << "\n====BinTreeTest! Generate a binTree of height: " << h<<endl;
 	BinTree<T> bt;
-	bt.insertAsRoot(randn((T)h * h * h)); print(bt);
+	bt.insertAsRoot(randn((T) h*h));print(bt);
+	randomBinTree<T>(bt, bt.root(), h); print(bt);
 }
 
 int main(int argc,char* argv[])
 {
-	if (2 > argc) { cout << "Usage:" << argv[0] << " <size of BinTree Test>\a\a\n"; return 1; }
+	//if (2 > argc) { cout << "Usage:" << argv[0] << " <size of BinTree Test>\a\a\n"; return 1; }
 	srand((unsigned)time(NULL));//改变随机种子的值
-
-	BinNode<int> B;
-	
     cout << "BinTree Test!\n"; 
-	testBinTree<int> (10);
+	testBinTree<int> (5);
 
 	return 0;
 }

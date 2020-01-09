@@ -14,6 +14,8 @@ public:
 	int size()const { return _size; }
 	bool empty()const { return !_root; }
 
+	BinNodePosi(T) root() const { return _root; }
+
 	BinNodePosi(T) insertAsRoot(T const& e);
 	BinNodePosi(T) insertAsLC(BinNodePosi(T) x, T const& e);//作为左孩子节点接入
 	BinNodePosi(T) insertAsRC(BinNodePosi(T) x, T const& e);//作为右孩子节点接入
