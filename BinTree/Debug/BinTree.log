@@ -1,2 +1,18 @@
 ﻿  BinTree.cpp
+C:\Users\yangq\Desktop\MyDemo\Mydsa\UPrint\print_implementation.h(63,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“BinTree<T> *”
+          with
+          [
+              T=int
+          ]
+C:\Users\yangq\Desktop\MyDemo\Mydsa\UPrint\print.h(35): message : 查看对正在编译的函数 模板 实例化“void UniPrint::p<T>(BinTree<T> &)”的引用
+          with
+          [
+              T=int
+          ]
+C:\Users\yangq\Desktop\MyDemo\Mydsa\BinTree\BinTree.cpp(28): message : 查看对正在编译的函数 模板 实例化“void print<BinTree<T>>(BinTree<T> &)”的引用
+          with
+          [
+              T=int
+          ]
+C:\Users\yangq\Desktop\MyDemo\Mydsa\BinTree\BinTree.cpp(37): message : 查看对正在编译的函数 模板 实例化“void testBinTree<int>(int)”的引用
   BinTree.vcxproj -> C:\Users\yangq\Desktop\MyDemo\Mydsa\Debug\BinTree.exe
