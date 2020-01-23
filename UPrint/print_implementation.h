@@ -5,10 +5,10 @@
 #define L_CHILD 1
 #define R_CHILD -1*L_CHILD
 
-void UniPrint::p(int e) { printf("%d ", e); }
+void UniPrint::p(int e) { printf("%4d ", e); }
 void UniPrint::p(float e) { printf("%4.1f ", e); }
 void UniPrint::p(double e) { printf("%4.1f ", e); }
-void UniPrint::p(char e) { printf("%c ", ((31 < e) && (e < 128))? e : '$'); }
+void UniPrint::p(char e) { printf("%4c ", ((31 < e) && (e < 128))? e : '$'); }
 
 //typeid():返回指针或引用所指对象的实际类型
 template <typename T>
@@ -43,11 +43,11 @@ static void printBinTree(BinNodePosi(T) bt, int depth, int type, Bitmap* bType) 
     for (int i = -1; i < depth; i++) //根据相邻各层
         if ((0 > i) || bType->test(i) == bType->test(i + 1)) //的拐向是否一致，即可确定
               printf("    "); //是否应该
-        else  printf("│   "); //打印横线
+        else  printf(" │  "); //打印横线
     switch (type) {
-    case  R_CHILD:  printf("┌─ ");  break;
-    case  L_CHILD:  printf("└─ ");  break;
-    default:  printf(" ── ");  break; //root
+    case  R_CHILD:  printf(" ┌─ ");  break;
+    case  L_CHILD:  printf(" └─ ");  break;
+    default:  printf("──");  break; //root
     }
     print(bt);
 #if defined(DSA_HUFFMAN)
@@ -60,7 +60,7 @@ static void printBinTree(BinNodePosi(T) bt, int depth, int type, Bitmap* bType) 
 template <typename T> 
 void UniPrint::p(BinTree<T>& tree)
 {
-	printf("\n%s[%d]*%d:\n", typeid (tree).name(), &tree, tree.size()); //基本信息
+	printf("\n%s[%p]*%d:\n", typeid (tree).name(), &tree, tree.size()); //基本信息：类名、地址、大小
     Bitmap* branchType = new Bitmap;
     printBinTree(tree.root(), -1, ROOT, branchType);
     release(branchType);

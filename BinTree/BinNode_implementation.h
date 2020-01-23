@@ -35,7 +35,7 @@ BinNodePosi(T) BinNode<T>::succ() {
 
 //层次遍历
 template <typename T> template <typename VST> 
- void BinNode<T>::travLevel(VST& visit) {
+ void BinNode<T>::travLevel(const VST& visit) {
 	 Queue<BinNodePosi(T)> Q;
 	 Q.enqueue(this);//根节点入队
 	 while (!Q.empty()) {
@@ -54,17 +54,18 @@ template <typename T> template <typename VST>
 
  //中序遍历
  template <typename T> template <typename VST>
- void BinNode<T>::travIn(VST& visit)
+ void BinNode<T>::travIn(const VST& visit)
  {
+	 BinNodePosi(T) x = this;
 	 //实现中序遍历的方法有多种
 	 Stack<BinNodePosi(T)> S;//辅助栈
 	 while (true)
 	 {
-		 goAlongLeftBranch(this, S);
+		 goAlongLeftBranch(x, S);
 		 if (S.empty())break;  //注意这句代码的位置
-		 this = S.pop();
-		 visit(this->data);
-		 this = this->rc;//转到右子树,然后执行goAlongLeftBranch
+		 x = S.pop();
+		 visit(x->data);
+		 x = x->rc;//转到右子树,然后执行goAlongLeftBranch
 	 }
  }
 

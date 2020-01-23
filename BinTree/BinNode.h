@@ -25,8 +25,8 @@ template <typename T> struct BinNode {
 	BinNodePosi(T) insertAsRC(T const& e);
 	BinNodePosi(T) succ();
 
-	template <typename VST> void travLevel(VST&);//层次遍历
-	template <typename VST> void travIn(VST&);//中序遍历
+	template <typename VST> void travLevel(const VST&);//层次遍历
+	template <typename VST> void travIn(const VST&);//中序遍历
 
 };
 

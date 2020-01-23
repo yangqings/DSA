@@ -15,7 +15,7 @@ void BinTree<T>::updateHeightAbove(BinNodePosi(T) x)
 	while (x) { updateHeight(x); x = x->parent; }
 }
 
-//空树插入跟节点
+//空树插入根节点
 template <typename T>
 BinNodePosi(T) BinTree<T>::insertAsRoot(T const& e)
 {
@@ -66,3 +66,16 @@ int BinTree<T>::remove(BinNodePosi(T) x)
 {
 	return 0;
 }
+
+
+//倍增操作器
+template <typename T> struct Double
+{
+	virtual void operator() (T& e) const { e *= 2; }
+};
+
+//递增操作器
+template <typename T> struct Increase
+{
+	virtual void operator() (T& e) const { e += 1; }
+};

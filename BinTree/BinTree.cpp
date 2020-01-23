@@ -1,5 +1,7 @@
 ﻿// BinTree.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 #include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
 #include "BinNode.h"
 #include "BinTree.h"
 #include "../Vector/rand.h"
@@ -27,6 +29,10 @@ void testBinTree(int h)
 	BinTree<T> bt;
 	bt.insertAsRoot(randn((T) h*h));print(bt);
 	randomBinTree<T>(bt, bt.root(), h); print(bt);
+	cout << "\n traversal: \n";
+	bt.travIn( Double<T>() ); print(bt);//中序遍历
+	bt.travLevel( Increase<T>() ); print(bt);//层次遍历
+
 }
 
 int main(int argc,char* argv[])
@@ -34,7 +40,7 @@ int main(int argc,char* argv[])
 	//if (2 > argc) { cout << "Usage:" << argv[0] << " <size of BinTree Test>\a\a\n"; return 1; }
 	srand((unsigned)time(NULL));//改变随机种子的值
     cout << "BinTree Test!\n"; 
-	testBinTree<int> (5);
+	testBinTree<int> (atoi(argv[1]));
 
 	return 0;
 }
