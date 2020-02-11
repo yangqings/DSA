@@ -1,6 +1,8 @@
 #pragma once
 #define max(a,b) (((a) > (b)) ? (a) : (b))
 #define min(a,b) (((a) < (b)) ? (a) : (b))
+
+
 //更新节点x的高度
 template <typename T>
 int BinTree<T>::updateHeight(BinNodePosi(T) x)
@@ -61,10 +63,19 @@ BinNodePosi(T) BinTree<T>::attachAsRC(BinNodePosi(T) x, BinTree<T>* &S)
 	S->size = 0; release(S); S = NULL; return x;
 }
 
-template <typename T>
+template <typename T>//二叉树删除x节点及其后代
 int BinTree<T>::remove(BinNodePosi(T) x)
 {
+
 	return 0;
+}
+
+template <typename T>//删除x节点及其后代，返回删除节点数
+static int removeAt(BinNodePosi(T) x)
+{
+	if (!x)return 0;//递归基
+	int n = 1 + removeAt(x->lc) + removeAt(x->rc);
+	release(x->data); release(x); return n;
 }
 
 

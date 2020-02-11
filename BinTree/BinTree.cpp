@@ -30,8 +30,8 @@ void testBinTree(int h)
 	bt.insertAsRoot(randn((T) h*h));print(bt);
 	randomBinTree<T>(bt, bt.root(), h); print(bt);
 	cout << "\n traversal: \n";
-	bt.travIn( Double<T>() ); print(bt);//中序遍历
-	bt.travLevel( Increase<T>() ); print(bt);//层次遍历
+	bt.travIn	( Double<T>() ); print(bt);//中序遍历，倍乘操作
+	bt.travLevel( Increase<T>() ); print(bt);//层次遍历，加操作
 
 }
 
