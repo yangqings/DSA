@@ -26,5 +26,11 @@
     <ClInclude Include="BST_implementation.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="BST_searchIn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BST_removeAt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

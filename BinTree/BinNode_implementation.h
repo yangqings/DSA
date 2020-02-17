@@ -47,7 +47,19 @@ BinNodePosi(T) BinNode<T>::insertAsRC(T const& e) {
 //定位节点的后继节点
 template <typename T>
 BinNodePosi(T) BinNode<T>::succ() {
-	//？
+	//理解为中序遍历得到的向量，节点x的后一个节点
+	BinNodePosi(T) s = this;
+	if (rc) { //存在右节点，则必在右子树中
+		s = rc;//先进入右子树，注意这一步
+		while (HasLChild(*s))s = s->lc;//往左深入，最小的节点即为后续节点
+	}
+	else { //无右节点，则直接后继为
+		while (IsRChild(*s)) s = s->parent;//当前节点若属于某父节点右孩子，往父节点移动
+		s = s->parent;//当前节点若只是左孩子,则其后继节点为其父节点，
+		              //若属于右节点，则后继节点是父节点的父节点	
+	}
+
+	return s;
 }
 
 

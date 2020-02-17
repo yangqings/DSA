@@ -5,7 +5,7 @@
 #define L_CHILD 1
 #define R_CHILD -1*L_CHILD
 
-void UniPrint::p(int e) { printf("%4d ", e); }
+void UniPrint::p(int e) { printf("%04d ", e); }
 void UniPrint::p(float e) { printf("%4.1f ", e); }
 void UniPrint::p(double e) { printf("%4.1f ", e); }
 void UniPrint::p(char e) { printf("%4c ", ((31 < e) && (e < 128))? e : '$'); }
@@ -47,7 +47,7 @@ static void printBinTree(BinNodePosi(T) bt, int depth, int type, Bitmap* bType) 
     switch (type) {
     case  R_CHILD:  printf(" ©°©¤ ");  break;
     case  L_CHILD:  printf(" ©¸©¤ ");  break;
-    default:  printf("©¤©¤");  break; //root
+    default:  printf("-- ");  break; //root
     }
     print(bt);
 #if defined(DSA_HUFFMAN)

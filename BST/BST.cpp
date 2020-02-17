@@ -1,9 +1,12 @@
 ﻿// BST.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+//二叉搜索树
 #include "BST.h"
+#include <iostream>
+using namespace std;
 
 int main()
 {
-    cout << "BST TEST!\n";
+    std::cout << "BST TEST!\n";
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

@@ -156,6 +156,8 @@
   <ItemGroup>
     <ClInclude Include="BST.h" />
     <ClInclude Include="BST_implementation.h" />
+    <ClInclude Include="BST_removeAt.h" />
+    <ClInclude Include="BST_searchIn.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
