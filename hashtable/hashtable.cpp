@@ -1,9 +1,31 @@
 ﻿// hashtable.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 #include "hashtable.h"
+//#include <iostream>
+//#include <stdlib.h>
+//using namespace std;
+
+void printN1(int N)
+{
+	if (N) {
+		printN1(N - 1);
+		cout << N << endl;
+	}
+	return;
+}
+void printN2(int N)
+{
+	for (int i = 1; i <= N; i++)
+	{
+		printf("%d\n", i);
+	}
+	return;
+}
 
 int main()
 {
     cout << "Hello World!\n";
+	
+	return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

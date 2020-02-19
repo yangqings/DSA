@@ -1,2 +1,15 @@
 ﻿  BST.cpp
-  BST.vcxproj -> C:\MyFile\6.Demo\Mydsa\x64\Debug\BST.exe
+c:\myfile\6.demo\mydsa\uprint\print.h(23): error C2061: 语法错误: 标识符“BinTree”
+c:\myfile\6.demo\mydsa\uprint\print_implementation.h(61): error C2065: “BinTree”: 未声明的标识符
+c:\myfile\6.demo\mydsa\uprint\print_implementation.h(61): error C2065: “tree”: 未声明的标识符
+c:\myfile\6.demo\mydsa\uprint\print_implementation.h(61): error C2182: “p”: 非法使用“void”类型
+c:\myfile\6.demo\mydsa\uprint\print_implementation.h(61): error C2350: “UniPrint::p”不是静态成员
+  c:\myfile\6.demo\mydsa\uprint\print_implementation.h(61): note: 参见“UniPrint::p”的声明
+c:\myfile\6.demo\mydsa\uprint\print_implementation.h(62): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\time.h(138): error C2143: 语法错误: 缺少“;”(在“__cdecl”的前面)
+c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\time.h(138): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\time.h(601): warning C4161: #pragma pack(pop...): 出栈的比入栈的多
+c:\myfile\6.demo\mydsa\bst\bst_implementation.h(35): error C2760: 语法错误: 意外的令牌“else”，预期的令牌为“语句”
+c:\myfile\6.demo\mydsa\bst\bst_implementation.h(42): error C3861: “_root”: 找不到标识符
+c:\myfile\6.demo\mydsa\bst\bst_implementation.h(51): error C3861: “_size”: 找不到标识符
+c:\myfile\6.demo\mydsa\bst\bst_implementation.h(62): error C3861: “_size”: 找不到标识符

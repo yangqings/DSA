@@ -158,6 +158,7 @@
     <ClInclude Include="..\Dictionary\dictionary.h" />
     <ClInclude Include="..\Entry\entry.h" />
     <ClInclude Include="hashtable.h" />
+    <ClInclude Include="Hashtable_implementation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
