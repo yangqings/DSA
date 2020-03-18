@@ -13,6 +13,8 @@ protected:
 	void bubbleSort(Rank lo, Rank hi);//冒泡排序
 	void merge(Rank lo, Rank mi, Rank hi);
 	void mergeSort(Rank lo, Rank hi);
+	Rank partition(Rank lo, Rank hi);
+	void quickSort(Rank lo, Rank hi);
 	//Rank max(Rank lo, Rank hi)
 public:
 	Vector(int c = DEFAULT_CAPACITY, int s = 0, T v = 0)//容量c，规模s，初始值v

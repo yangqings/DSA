@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BST", "BST\BST.vcxproj", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hashtable", "hashtable\hashtable.vcxproj", "{4D1617FA-C882-408D-AAC2-9F467F0ED453}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ComplHeap", "ComplHeap\ComplHeap.vcxproj", "{3CF4F42B-91CA-4062-ABCA-46BCC96EA101}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{4D1617FA-C882-408D-AAC2-9F467F0ED453}.Release|x64.Build.0 = Release|x64
 		{4D1617FA-C882-408D-AAC2-9F467F0ED453}.Release|x86.ActiveCfg = Release|Win32
 		{4D1617FA-C882-408D-AAC2-9F467F0ED453}.Release|x86.Build.0 = Release|Win32
+		{3CF4F42B-91CA-4062-ABCA-46BCC96EA101}.Debug|x64.ActiveCfg = Debug|x64
+		{3CF4F42B-91CA-4062-ABCA-46BCC96EA101}.Debug|x64.Build.0 = Debug|x64
+		{3CF4F42B-91CA-4062-ABCA-46BCC96EA101}.Debug|x86.ActiveCfg = Debug|Win32
+		{3CF4F42B-91CA-4062-ABCA-46BCC96EA101}.Debug|x86.Build.0 = Debug|Win32
+		{3CF4F42B-91CA-4062-ABCA-46BCC96EA101}.Release|x64.ActiveCfg = Release|x64
+		{3CF4F42B-91CA-4062-ABCA-46BCC96EA101}.Release|x64.Build.0 = Release|x64
+		{3CF4F42B-91CA-4062-ABCA-46BCC96EA101}.Release|x86.ActiveCfg = Release|Win32
+		{3CF4F42B-91CA-4062-ABCA-46BCC96EA101}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

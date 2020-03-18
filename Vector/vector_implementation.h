@@ -4,6 +4,7 @@
 #include "vector.h"
 #include "vector_search_binary.h"
 #include "vector_search_fibonacci.h"
+#include "partition.h"
 
 //以下是类成员函数和重载操作符的定义
 //基于复制的向量构造器
@@ -139,6 +140,15 @@ void Vector<T>::bubbleSort(Rank lo, Rank hi) {
 	printf("\n");
 	printf("BubbleSort[%3d, %3d):\n", lo, hi);
 	while (!bubble(lo, hi--));
+}
+
+template <typename T>
+void Vector<T>::quickSort(Rank lo, Rank hi) {
+	printf("Quick Sort[%3d, %3d]\n",lo,hi);
+	if (hi - lo < 2)return;
+	Rank mi = partition(lo, hi - 1);
+	quickSort(lo, mi);
+	quickSort(mi + 1, hi);
 }
 
 //排序接口函数，sortMethod选择排序算法

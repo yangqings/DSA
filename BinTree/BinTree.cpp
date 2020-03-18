@@ -40,8 +40,8 @@ int main(int argc,char* argv[])
 	//if (2 > argc) { cout << "Usage:" << argv[0] << " <size of BinTree Test>\a\a\n"; return 1; }
 	srand((unsigned)time(NULL));//改变随机种子的值
     cout << "BinTree Test!\n"; 
-	testBinTree<int> (atoi(argv[1]));
-
+	//testBinTree<int> (atoi(argv[1]));
+	testBinTree<int>(8);
 	return 0;
 }
 
